@@ -1,7 +1,8 @@
 // MAIN CONTROLLER
 function mainController($scope, $http, todoService) {
 	$scope.title = "Todo List";
-	
+	$scope.myTxt = "hello all people and welcom ";
+
 	function load(){
 		todoService.get().then(function(res){
 			$scope.todos = res.data;
@@ -24,6 +25,9 @@ function mainController($scope, $http, todoService) {
 		todoService.delete(todo._id).then(function(res){
 			load();
 		});
+	}
+		$scope.myFunc = function () {
+		$scope.myTxt = "You clicked submit!";
 	}
 	load();
 }

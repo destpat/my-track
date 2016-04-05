@@ -4,8 +4,16 @@ function config($routeProvider) {
 			templateUrl: 'views/main.html',
 			controller: 'mainController'
 		})
+		.when('/main', {
+			templateUrl: 'views/main.html',
+			controller: 'mainController'
+		})
 		.when('/acceuil', {
 			templateUrl: 'views/acceuil.html'
+		})
+		.when('/meteo', {
+			templateUrl: 'views/meteo.html',
+			controller:'meteoController'
 		})
 		.otherwise({
 			redirectTo: '/'
