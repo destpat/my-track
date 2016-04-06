@@ -34,7 +34,6 @@ audio, canvas, video {
   position: absolute;
   top: 20%;
   margin-left: 30%;
-
 }
 .hero_area>h3{
   font-family: helvetica;
@@ -44,6 +43,7 @@ audio, canvas, video {
   top: 37%;
   margin-left: 22%;
 }
+
 .search{
   position: absolute;
   top: 55%;
@@ -59,7 +59,7 @@ audio, canvas, video {
   text-align: center;
 }
 
-.all_icon>h2{
+.all_icon> h2{
   text-align: center;
 }
 

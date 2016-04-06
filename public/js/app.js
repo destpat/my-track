@@ -12,6 +12,7 @@ function config($routeProvider) {
 			templateUrl: 'views/acceuil.html'
 		})
 		.when('/meteo', {
+			// url:'/meteo/:ville',
 			templateUrl: 'views/meteo.html',
 			controller:'meteoController'
 		})
@@ -28,6 +29,7 @@ function run($rootScope, $location){
 angular.module('app', ['ngRoute'])
     .config(config)
     .controller('mainController', mainController)
+		.controller('meteoController', meteoController)
     .service('todoService', todoService)
     /*.factory('', )*/
     .run(run);

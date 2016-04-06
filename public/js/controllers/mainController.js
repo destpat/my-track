@@ -1,5 +1,5 @@
 // MAIN CONTROLLER
-function mainController($scope, $http, todoService) {
+function mainController($scope, $http, $location, todoService) {
 	$scope.title = "Todo List";
 	$scope.myTxt = "hello all people and welcom ";
 
@@ -15,19 +15,21 @@ function mainController($scope, $http, todoService) {
 			load();
 		});
 		$scope.description = "";
-	}
+
+	},
+	$scope.search = function(ville) {
+			var data = {};
+			$location.path('/meteo').search({ville});
+	},
 	$scope.update = function(todo){
 		todoService.update(todo._id, todo).then(function(res){
 			load();
 		});
-	}
+	},
 	$scope.delete = function(todo){
 		todoService.delete(todo._id).then(function(res){
 			load();
 		});
-	}
-		$scope.myFunc = function () {
-		$scope.myTxt = "You clicked submit!";
-	}
+	},
 	load();
 }
