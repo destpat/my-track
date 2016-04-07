@@ -11,7 +11,7 @@ function config($routeProvider) {
 		.when('/acceuil', {
 			templateUrl: 'views/acceuil.html'
 		})
-		.when('/meteo', {
+		.when('/meteo/', {
 			// url:'/meteo/:ville',
 			templateUrl: 'views/meteo.html',
 			controller:'meteoController'

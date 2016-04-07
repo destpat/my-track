@@ -1,5 +1,5 @@
 // MAIN CONTROLLER
-function mainController($scope, $http, $location, todoService) {
+function mainController($scope, $location, todoService) {
 	$scope.title = "Todo List";
 	$scope.myTxt = "hello all people and welcom ";
 

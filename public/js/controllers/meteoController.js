@@ -1,7 +1,9 @@
-function meteoController($scope, $route, $http) {
+function meteoController($scope, $routeParams, $http) {
 
-  $scope.ville = $route.current.params;
-  url = "api.openweathermap.org/data/2.5/weather?q="+ $route.current.params
-  api.openweathermap.org/data/2.5/weather?q={city name}
+  // $scope.weather = $scope.ville = $routeParams.ville
+  url = "http://api.openweathermap.org/data/2.5/weather?q="+$routeParams.ville+"&appid=daaef6850429a01166978bab823c79f3"
+  $http.get(url).success(function(response) {
+    $scope.weather = response;
 
+  })
 }
